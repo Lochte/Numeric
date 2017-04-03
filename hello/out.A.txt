@@ -1,3 +1,0 @@
-PYTHON = python3
-out.A.txt : main-A.py
-	$(PYTHON) main-A.py > out.A.txt
