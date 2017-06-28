@@ -1,0 +1,6 @@
+###### Task B ######
+Calculate the integral cos(x)*y^2 from 0 to pi/2 and 0 to 3
+Monte Carlo with N from 10^1 to 10^7:
+[ 7.94693917  9.13964284  9.03331482  8.99147758  8.97844279  9.00644751]
+Exact result: 9
+check .png for graphic demonstration

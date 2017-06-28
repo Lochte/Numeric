@@ -14,4 +14,4 @@ outB.txt: mainptB.py
 
 clean:
 	rm -rf __pycache__
-	rm -r outA.txt outB.txt
+	rm -r outA.txt outB.txt *.pyc

@@ -14,4 +14,4 @@ outputA.txt: mainptA.py findroots.py equations.py
 
 clean:
 	rm -rf __pycache__
-	rm -r outputA.txt outputB.txt
+	rm -r outputA.txt outputB.txt *.pyc

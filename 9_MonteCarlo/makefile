@@ -12,7 +12,6 @@ B: outputB.txt
 outputB.txt: mainptB.py
 	python $< > $@
 
-
 clean:
 	rm -rf __pycache__
 	rm -r outputA.txt outputB.txt *.pyc

@@ -1,5 +1,7 @@
 A : main-A.py
 	python3 main-A.py > out.A.txt
+	python3 main-A.py
+
 
 clean:
 	rm -f main-A out.A.txt correct.txt
