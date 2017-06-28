@@ -1,4 +1,4 @@
-all: A
+all: A B
 
 A: outputA.txt
 	cat $<
@@ -6,6 +6,12 @@ A: outputA.txt
 outputA.txt: mainptA.py
 	python $< > $@
 
+B: outputB.txt
+	cat $<
+
+outputB.txt: mainptB.py
+	python $< > $@
+
 clean:
 	rm -rf __pycache__
-	rm -r outputA.txt *.pyc
+	rm -r outputA.txt outputB.txt *.pyc

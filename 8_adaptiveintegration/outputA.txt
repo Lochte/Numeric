@@ -1,3 +1,4 @@
+###### Task A ######
 Integral of x^3 from 0 to 1
 Exact result:
 0.25

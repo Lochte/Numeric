@@ -1,0 +1,15 @@
+###### Task B ###### 
+
+The integral calculated is of f(x) = 1/(1+x^2):
+Exact result:
+3.14159265359
+
+
+The open sets integral is:
+3.04615384615
+# of integrand calls: 65535
+
+
+scipy.integrate package:
+integration result:
+(3.141592653589793, 5.155583041103855e-10)
