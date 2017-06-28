@@ -1,6 +1,7 @@
 from __future__ import division
 from jacobidiag import *
 import numpy as np
+import time
 
 A    = np.array([[21.0,7.0,6.0],[7.0,8.0,-10.0],[6.0,-10.0,15.0]])
 Aorg = np.copy(A)
@@ -21,6 +22,7 @@ for i in range(n):
 print "\n"
 print "Diagonal matrix D containing eigenvalues"
 print D
+print "number of sweeps: "
 print sweeps
 
 print "\n"

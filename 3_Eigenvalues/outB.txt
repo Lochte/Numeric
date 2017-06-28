@@ -1,0 +1,36 @@
+###### Task B ######
+[[ 21.   7.   6.]
+ [  7.   8. -10.]
+ [  6. -10.  15.]]
+
+
+Diagonal matrix D containing eigenvalues
+[[ -2.66144421   0.           0.        ]
+ [  0.          21.86929696   0.        ]
+ [  0.           0.          24.79214725]]
+number of sweeps: 
+10
+
+
+Orthogonal matrix V consisting of eigenvectors
+[[ 0.36209025  0.25678251  0.89607667]
+ [-0.75303858  0.64715528  0.11884002]
+ [-0.5493847  -0.71781111  0.42769575]]
+
+
+check that A = VDVT:
+[[ 21.   7.   6.]
+ [  7.   8. -10.]
+ [  6. -10.  15.]]
+
+
+check that VTAV = D
+[[ -2.66144421e+00  -2.12369427e-15   5.55111512e-16]
+ [ -4.82333640e-15   2.18692970e+01  -7.11883885e-11]
+ [  1.77635684e-15  -7.11919412e-11   2.47921472e+01]]
+
+
+Comparison:
+Cyclic solved in: 0.00031590461731 seconds
+Value-by-value solved in: 0.000636100769043 seconds
+Value-by-value lowest eigenvalue solved in: 4.50611114502e-05 seconds

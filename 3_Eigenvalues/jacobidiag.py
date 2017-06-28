@@ -6,9 +6,9 @@ import numpy as np
 
 def jacobidiag(A):
         n = np.shape(A)[0]
-	d = np.zeros(n)
-	for i in range(n):
-		d[i]=A[i,i]
+        d = np.zeros(n)
+        for i in range(n):
+            d[i]=A[i,i]
     	V = np.matrix(np.identity(n))
     	sweeps = 0
     	rotated = True
@@ -18,6 +18,30 @@ def jacobidiag(A):
             		for j in range(i+1,n):
                 		rotated, sweeps=rotate(i,j,n,A,V,d,rotated,sweeps)
     	return d,V,sweeps
+
+
+def valbyval(A,rows):
+        n = np.shape(A)[0]
+        d = np.zeros(n)
+        Aorg = np.copy(A)
+        for i in range(n):
+            d[i]=A[i,i]
+        V = np.matrix(np.identity(n))
+        sweeps = 0
+        rotated = True
+        while rotated:
+            rotated = False
+            for p in range(rows-1):
+                q=p+1
+
+                diag_row=np.zeros(shape=(1,n))
+                for i in range(q):
+                    diag_row[0,i]=A[p,i]
+                q=np.argmax(np.absolute(A[p,:]-diag_row))
+                rotated, sweeps=rotate(p,q,n,A,V,d,rotated,sweeps)
+        return d,V,sweeps
+
+
 
 
 def rotate(p,q,n,A,V,d,rotated,sweeps):
