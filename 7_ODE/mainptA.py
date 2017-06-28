@@ -10,7 +10,13 @@ eps=1e-3
 step=1e-1
 ystart=np.array([0,1])
 
+print '###### part B ######'
 [t,y,error] = driver(f,0.,10.,ystart,step,acc,eps)
+print 'Stored matrix solution to d^2y/dx^2 = y given y(0) = 0 and y(0) = 1:'
+
+for i in range(len(t)):
+	print t[i],' ',y[i][0],' ',y[i][1]
+
 plt.figure()
 plt.title('Solution to d^2y/dx^2 = y given y(0) = 0 and y(0) = 1 ')
 plt.plot(t,y,'rx',label="numerical")
@@ -24,6 +30,11 @@ def f(x,y):
 	return f
 
 [t,y1,error] = driver(f,0.,10.,1.,step,acc,eps)
+print 'Stored matrix for the solution to dy/dx=sin(y) given y(0)=1:'
+
+for i in range(len(t)):
+	print t[i],' ',y[i][0],' ',y[i][1]
+
 plt.figure()
 plt.title('Solution to dy/dx=sin(y) given y(0)=1')
 plt.plot(t,y1,'rx',label="numerical")
