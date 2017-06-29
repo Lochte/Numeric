@@ -18,4 +18,3 @@ plt.plot(z,f1, label = 'Linear interpolation')
 legend = plt.legend(loc='upper left', shadow=True, fontsize='large')
 
 plt.savefig('linear.png',format='png')
-# cubic interpolation

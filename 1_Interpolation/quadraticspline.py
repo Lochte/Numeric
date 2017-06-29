@@ -3,6 +3,9 @@ import search
 
 def qinterp(x,y,z):
 	qs = np.zeros(len(z))
+	dz = np.zeros(len(z))
+	qint = np.zeros(len(z))
+	dint = np.zeros(len(z))
 	dx = np.zeros(len(x))
 	dy = np.zeros(len(x))
 	a1 = np.zeros(len(x))
@@ -12,6 +15,8 @@ def qinterp(x,y,z):
 	for i in range(len(x)-1):
 		dx[i] = x[i+1]-x[i]
 		dy[i] = y[i+1]-y[i]
+	for i in range(len(z)-1):
+		dz[i] = z[i+1]-z[i]
 	for j in range(len(x)-1):
 		a1[j+1] = 1/dx[j+1]*(dy[j+1]/dx[j+1]-dy[j]/dx[j]-a1[j]*dx[j])
 	for j in range(len(x)-3,-1,-1):
@@ -20,4 +25,9 @@ def qinterp(x,y,z):
 	for k in range(len(z)):
 		l = search.bin(x,z[k])
 		qs[k] = y[l] + dy[l]/dx[l]*(z[k]-x[l])+a[l]*(z[k]-x[l])*(z[k]-x[l+1])
-	return qs
+
+	for i in range(len(z)-1):
+		qint[i] = qs[i]*dz[i]
+		dint[i] = (qs[i+1]-qs[i])/dz[i]
+	qint = np.add.accumulate(qint)
+	return qs,qint,dint
