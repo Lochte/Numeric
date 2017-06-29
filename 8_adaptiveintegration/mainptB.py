@@ -21,7 +21,7 @@ eps=1e-3
 
 qtype=1
 counter.calls=0
-Qo,erroro=adapt(f,a,b,acc,eps,qtype)
+Qo=adapt(f,a,b,acc,eps,qtype)
 print '\n'
 print 'The open sets integral is:\n',Qo
 print '# of integrand calls:', counter.calls

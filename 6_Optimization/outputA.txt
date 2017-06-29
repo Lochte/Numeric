@@ -1,0 +1,15 @@
+###### Task A ######
+Starting points= [-5.  6.]
+Minima of Rosenbrock's valley function:
+[ 1.  1.]
+steps:
+37
+
+
+Starting points= [-4.  8.]
+Minima of Himmelblau function:
+[-2.82586177  3.70575162]
+steps:
+16
+
+

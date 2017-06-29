@@ -1,5 +1,5 @@
 ###### Task A ######
 Monte Carlo integration:
 Calculate the integral given in the assignment
-Monte carlo with N=10^7: 1.39127306178
+Monte carlo with N=10^7: 1.38533000019
 The result given is 1.39320392969

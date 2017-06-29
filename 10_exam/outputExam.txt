@@ -1,0 +1,59 @@
+###### Exam ######
+
+
+The integral of cos(x) is found:
+the exact result is:
+1.68294196962
+
+
+The calculated integral with clenshaw curtis transformation is:
+1.68342065652
+# of integrand calls: 113
+
+
+
+
+The calculated integral with regular adaptive integration is:
+1.68127140339
+# of integrand calls: 47
+
+
+
+
+---------------------------
+The integral of x^2 is found:
+the exact result is:
+0.666666666667
+
+
+The calculated integral with clenshaw curtis transformation is:
+0.65601919319
+# of integrand calls: 89
+
+
+
+
+The calculated integral with regular adaptive integration is:
+0.668443852632
+# of integrand calls: 95
+
+
+---------------------------
+The integral of exp(x) is found:
+the exact result is:
+2.35040238729
+
+
+The calculated integral with clenshaw curtis transformation is:
+2.3496164159
+# of integrand calls: 167
+
+
+
+
+The calculated integral with regular adaptive integration is:
+2.35020765852
+# of integrand calls: 99
+
+
+it seems the two methods are compareable in efficiency..

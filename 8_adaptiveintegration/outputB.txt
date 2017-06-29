@@ -6,8 +6,8 @@ Exact result:
 
 
 The open sets integral is:
-3.04615384615
-# of integrand calls: 65535
+3.14172673139
+# of integrand calls: 31
 
 
 scipy.integrate package:

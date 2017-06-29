@@ -9,6 +9,7 @@ Diagonal matrix D containing eigenvalues
 [[ -2.66144421   0.           0.        ]
  [  0.          21.86929696   0.        ]
  [  0.           0.          24.79214725]]
+number of sweeps: 
 8
 
 

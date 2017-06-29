@@ -10,11 +10,11 @@ def fn(a,b,x):
 
 
 
-def adapt(g,a,b,acc,eps,qtype):
+def adapt(g,a,b,acc,eps,qtype,trans):
 	if qtype==0:
 		x = np.array([0.,2/6,4/6,1.])
 	else:
-		x = np.array([1/6,2/6,4/6,5/6])
+		x = np.array([1/8,3/8,5/8,7/8])
 	n = len(x)
 	h = (b-a)
 	fm=np.zeros(n)
@@ -30,7 +30,7 @@ def adapt(g,a,b,acc,eps,qtype):
 		for i in range(n):
 			fm[i] = g(fn(a,b,x[i]))
 	elif a!=inf and b==inf:
-		f_ny=g
+		f_ny=f
 		a_ny=a
 		a=0.
 		b=1.
@@ -40,12 +40,22 @@ def adapt(g,a,b,acc,eps,qtype):
 		for i in range(n):
 			fm[i] = g(fn(a,b,x[i]))
 	elif a==-inf and b!=inf:
-		f_ny=g
+		f_ny=f
 		b_ny=bcd
 		a=0.
 		b=1.
 		def g(x):
 			g = (f_ny(b_ny-(1-x)/x))/(x*x)
+			return g
+		for i in range(n):
+			fm[i] = g(fn(a,b,x[i]))
+	elif a==-1 and b==1 and trans==1:       # Clenshaw curtis conditions
+		f_ny=g                            	# old function is stored in f_ny
+		a = 0                               # lower limit is changed to 0
+		b = np.pi                           # upper limit is changed to pi
+		h = (b - a)
+		def g(x):
+			g = (f_ny(np.cos(x))*np.sin(x)) # Clenshaw curtis transformation
 			return g
 		for i in range(n):
 			fm[i] = g(fn(a,b,x[i]))
